@@ -3,8 +3,8 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
-title:
+repository-name: e19-co328-Digital-Reporting-of-Technical-Visits
+title: Digital Reporting of Technical Visits
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
@@ -20,9 +20,9 @@ This is a sample image, to show how to add images to your page. To learn more op
  -->
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/19/008, Chandula Adhikari, [email](mailto:name@email.com)
+-  E/19/009, Kaumini Adikari, [email](mailto:name@email.com)
+-  E/19/063, Sandeep Dassanayake, [email](mailto:name@email.com)
 
 ## Table of Contents
 1. [Introduction](#introduction)
