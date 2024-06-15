@@ -75,7 +75,12 @@ For any questions, feedback, or collaborations, feel free to reach out to our pr
 -  E/19/008, Adhikari R.A.J.C., [email](mailto:e19008@eng.pdn.ac.lk)
 -  E/19/009, Adhikari A.M.K.M., [email](mailto:e19009@eng.pdn.ac.lk)
 -  E/19/063, Dassanayake D.M.G.S., [email](mailto:e19063@eng.pdn.ac.lk)
+-  E/19/094, Mansitha Eashwara, [email](mailto:e19094@eng.pdn.ac.lk)
+-  E/19/124, Hirushi Gunasekara, [email](mailto:e19124@eng.pdn.ac.lk)
+-  E/19/129, Kanishka Gunawardena, [email](mailto:e19129@eng.pdn.ac.lk)
 -  E/19/324, Rathnayake R.M.B.D.K., [email](mailto:e19324@eng.pdn.ac.lk)
+-  E/19/372, Kaushitha Silva, [email](mailto:e19372@eng.pdn.ac.lk)
+-  E/19/408, Sanduni Ubayasiri, [email](mailto:e19408@eng.pdn.ac.lk)
 
 ## Links
 
