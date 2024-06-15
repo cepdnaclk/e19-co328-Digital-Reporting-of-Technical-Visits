@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,800&display=swap');
+
+$font-stack: "Raleway", sans-serif;
+$primary-yellow: rgb(235, 168, 1);
+$bgcolor: #ebedee;
+$disabledTextColor: rgb(175, 175, 175);
+$waitingColor: rgb(82, 127, 153);
+$pastColor: rgba(255, 255, 255, 0);
+$todayColor: rgba(148, 114, 51, 0.938);
+$upcomingColor: rgb(48, 121, 108);
+$confirmedColor: rgb(106, 187, 160);
+$editColor: rgb(76, 120, 156);
+$cancelColor: rgb(227, 104, 104);
+$accentColor:  rgb(54, 54, 54);
+$bodyTextColor: hsl(0, 0%, 20%);
+$verifyColor: rgb(120, 138, 114);
+$testColor: #fff6f1;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

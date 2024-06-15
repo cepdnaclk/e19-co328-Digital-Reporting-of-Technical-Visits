@@ -1,0 +1,151 @@
+/* TaskTimeline.module.scss */
+
+.task-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  background-color: #ffffffce;
+  border-radius: 1.8em;
+
+  
+
+  .task-tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1; /* Ensure the tooltip appears above other elements */
+    width: 200px; /* Adjust the width as needed */
+  }
+  
+
+  .task-cell {
+    cursor: pointer;
+    position: relative; /* Add a position relative to the task cell */
+    border-radius: 0.8rem;
+    
+    &:hover {
+      /* Show the tooltip when hovering over the task cell */
+      .task-tooltip {
+        display: block;
+        top: 100%; /* Position the tooltip below the task cell */
+        left: 50%; /* Position the tooltip centered horizontally */
+        transform: translateX(-50%); /* Center the tooltip horizontally */
+      }
+    }
+  }
+
+  .task-info {
+    /* Styles for the additional task information in the tooltip */
+    font-size: 14px;
+    /* Add more styles as needed */
+  }
+
+  .technician-cell {
+    /* Styles for the technician cell */
+    /* Add styles as needed */
+  }
+
+  .time-slot-cell {
+
+
+    /* Styles for the time slot cell */
+    /* Add styles as needed */
+  }
+
+scale: 0.9;
+
+  /* Add styles for other elements as needed */
+}
+
+
+.timeline-table {
+    border-radius: 1.8em;
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0px 6px 23px -6px rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    thead tr {
+      color: hsl(0, 0%, 95%);
+      background-color: darken($color: rgb(54, 54, 54), $amount: 2);
+      text-align: left;
+      align-items: center;
+      align-content: center;
+    }
+    th,
+    td {
+      border: 0.5px solid #cccccc46;
+      padding: 0.8em 0.7em;
+      text-align: center;
+      vertical-align: middle;
+      text-overflow: ellipsis;
+      width: calc(100%/11);
+      height: 3.5rem;
+    }
+    .task-title{
+      font-size:0.9em;
+      color:white;
+      font-weight: bold;
+      text-shadow: 1.5px 1px #6d6c6c59;
+      text-align: center;
+    }
+
+
+
+}
+// /* TaskTimeline.css */
+// .task-timeline {
+//   display: grid;
+//   grid-template-columns: auto repeat(12, 1fr); /* Adjust the number of columns as needed */
+//   grid-template-rows: auto;
+//   gap: 4px; /* Adjust the gap between grid items */
+// }
+
+.time-slots {
+  grid-column: 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 4px;
+}
+
+.time-slot-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.technician-labels {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 4px;
+}
+
+.technician-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.timeline-grid {
+  grid-column: 2 / span 12; /* Adjust the number of columns as needed */
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 4px;
+}
+
+.task-card {
+  background-color: #3498db;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  text-align: center;
+}
