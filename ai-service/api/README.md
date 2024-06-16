@@ -8,10 +8,6 @@ Follow these steps to set up the backend environment:
 
 1. Clone the Repository:
 
-   ```bash
-   cd backend
-   ```
-
 2. Create a Virtual Environment (Optional but Recommended):
 
    ```bash
@@ -42,11 +38,7 @@ Follow these steps to set up the backend environment:
 
 To run the backend server, use the following commands:
 
-1. Change to the `backend` directory if you're not already there:
-
-   ```bash
-   cd backend
-   ```
+1. Change to the `api` directory if you're not already there:
 
 2. Activate the Virtual Environment (if not already activated):
 
