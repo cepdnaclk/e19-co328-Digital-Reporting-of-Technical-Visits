@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+numpy
+python-multipart
+pandas
+matplotlib
+httpx
+scikit-learn
+gdown
+pytest
+requests
+imutils
+spacy
+joblib
