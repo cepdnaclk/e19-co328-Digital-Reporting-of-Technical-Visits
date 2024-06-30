@@ -1,0 +1,175 @@
+.tasksCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: left;
+  margin-top: 4em;
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #3b75b0;
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .todayTasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1em;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+
+    .taskTitle {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #3a3a3a;
+      margin-left: 1rem;
+    }
+
+    .taskFiller {
+      // background-color: #94949494;
+      border-radius: 2rem;
+      padding: 0.5rem;
+      padding-inline: 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #686868;
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+      margin-bottom: 1em;
+      // border:1px solid #686868;
+    }
+
+    .taskFillerOngoing {
+      // background-color: #5e94ca86;
+      padding: 0.5rem;
+      padding-inline: 1rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #25496d;
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+      margin-bottom: 1em;
+      // border:1px solid #25496D;
+    }
+
+    .ongoingTasksContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      align-items: center;
+      padding: 0.5rem;
+      width: 100%;
+      margin-bottom: 1em;
+
+      .taskCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: auto;
+        height: auto;
+        border-radius: 1em;
+        background-color: #25496d;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 1rem;
+        gap: 0.2rem;
+
+        .jobTitle {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        .jobContent {
+          display: flex;
+          font-size: 0.6rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .completedTasksContainer {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 0.5rem;
+      // justify-content: space-between;
+      width: 100%;
+      margin-bottom: 1em;
+
+      .taskCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: auto;
+        height: auto;
+        border-radius: 1em;
+        background-color: #686868;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 1rem;
+        gap: 0.2rem;
+
+        .jobTitle {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        .jobContent {
+          display: flex;
+          font-size: 0.6rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .monthTasks {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+
+    .countBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: #ffffff;
+      padding: 1rem;
+      padding-inline: 1.5rem;
+      border-radius: 1em;
+
+      .countBoxTitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #3a3a3a;
+      }
+
+        .countBoxValue{
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #3b75b0;
+        }
+    }
+  }
+}
