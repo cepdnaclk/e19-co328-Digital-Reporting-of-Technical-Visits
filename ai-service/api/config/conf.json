@@ -1,6 +1,6 @@
 {
   "PROJECT_CONF": {
-    "PROJECT_NAME": "Digital Reporting of Technical Visits - AI Micro Service",
+    "PROJECT_NAME": "Digital Reporting of Technical Visits - AI Microservice",
     "PROJECT_DESCRIPTION": "Digital Reporting of Technical Visits",
     "API_VERSION": "1.0.0",
     "API_VERSION_PATH": "/",

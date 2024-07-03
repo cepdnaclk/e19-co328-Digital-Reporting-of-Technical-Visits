@@ -33,7 +33,7 @@ app.add_middleware(
 
 # Adding routes from different modules
 app.include_router(suggestRoute.router, prefix="/suggest", tags=["suggest"])
-app.include_router(trainRoute.router, prefix="/train", tags=["train"])
+# app.include_router(trainRoute.router, prefix="/train", tags=["train"])
 
 
 # Root API endpoint

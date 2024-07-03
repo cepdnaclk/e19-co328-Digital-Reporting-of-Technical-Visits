@@ -1,32 +1,24 @@
 from models.suggestModel import TaskRequest, TechnicianSuitability
-import joblib
-import numpy as np
-
-# Load the model, vectorizer, and label encoder
-model = joblib.load('ai-models/random_forest_model.joblib')
-vectorizer = joblib.load('ai-models/tfidf_vectorizer.joblib')
-label_encoder = joblib.load('ai-models/label_encoder.joblib')
+from ai_component.find_matches import find_top_matches
 
 def getSuggestions(task_request: TaskRequest):
-    # Prepare input data for prediction
-    input_data = [task_request.description + " " + task_request.task_title]
-    X_input = vectorizer.transform(input_data)
     
-    # Get probabilities for each technician
-    probabilities = model.predict_proba(X_input)[0]
-    
-    # Get sorted list of technicians based on suitability
-    technician_ids_encoded = np.argsort(-probabilities)
-    suitability_scores = np.sort(probabilities)[::-1]
+    technician_list = [
+        "string to compare with example",
+        "another different example string",
+        "completely unrelated text",
+        "example string match test",
+        "yet another example string",
+        "another example string different"
+    ]
 
-    # Decode technician IDs
-    technician_ids = label_encoder.inverse_transform(technician_ids_encoded)
+    top_matches = find_top_matches(task_request.description, technician_list)
 
     # Create response
     response = [
-        {"technician_id": technician_id, "suitability": float(suitability)}
-        for technician_id, suitability in zip(technician_ids, suitability_scores)
+        {"technician_id": technician_list[technician_id], "suitability": round(float(suitability)*100, 2)}
+        for technician_id, suitability in top_matches
     ]
     
     # Return only the top 3 suitable technicians
-    return response[:3]
+    return response
