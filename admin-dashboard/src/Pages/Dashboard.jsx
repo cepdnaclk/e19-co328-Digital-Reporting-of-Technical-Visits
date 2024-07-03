@@ -4,6 +4,7 @@ import UserCard from "../Components/UserCard";
 import Notification from "../Components/Notification";
 import OngoingTasksCard from "../Components/OngoingTasksCard";
 import CompletedTasksCard from "../Components/CompletedTasksCard";
+import DashboardTasks from "../Components/DashboardTasks";
 import styles from "../Styles/Dashboard.module.scss";
 import PieChart from "../Components/PieChart";
 
@@ -16,13 +17,7 @@ export const Dashboard = () => {
       <div className={styles.component_container}>
         <Calendar />
         <div className={styles.dataContainer}>
-          <div className={styles.cardContainer}>
-            <OngoingTasksCard />
-            <CompletedTasksCard />
-          </div>
-          <div className={styles.pieChart}>
-            <PieChart />
-          </div>
+          <DashboardTasks />
         </div>
       </div>
     </div>
