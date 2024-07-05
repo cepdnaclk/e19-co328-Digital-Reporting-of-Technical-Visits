@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def find_top_matches(target_string, string_list, top_n=3):
+def find_top_matches_strings(target_string, string_list, top_n=3):
     # Combine the target string with the list of strings
     combined_strings = [target_string] + string_list
     
@@ -19,19 +19,33 @@ def find_top_matches(target_string, string_list, top_n=3):
 
     return similar_strings
 
+def find_top_matches(task, technians, top_n=3):
+
+    task_description = task['description']
+
+    technians_descriptions = [technians['description'] for technians in technians]
+
+    match_ids = find_top_matches_strings(task_description, technians_descriptions, top_n)
+
+    match_technians = [(technians[i]['id'], score) for i, score in match_ids]
+
+    task['matches'] = match_technians
+
+    return task
 
 if __name__ == '__main__':
     # Example usage
-    target_string = "example string to match"
-    string_list = [
-        "string to compare with example",
-        "another different example string",
-        "completely unrelated text",
-        "example string match test",
-        "yet another example string",
-        "another example string different"
+    task = {'id': 'TS001', 'description': 'Fix the broken sprinkler system in the garden.'}
+
+    technician_list = [
+        {'id': 'T001', 'description': 'Repair the broken sprinkler system in the garden.'},
+        {'id': 'T002', 'description': 'Fix the broken sprinkler system in the garden.'},
+        {'id': 'T003', 'description': 'Replace the broken sprinkler system in the garden.'},
+        {'id': 'T004', 'description': 'Repair the broken sprinkler system in the garden.'},
+        {'id': 'T005', 'description': 'Fix the broken sprinkler system in the garden.'},
     ]
 
-    top_matches = find_top_matches(target_string, string_list)
-    for match, score in top_matches:
-        print(f"Match: {string_list[match]}, Score: {score}")
+    task_updated = find_top_matches(task, technician_list)
+
+    for match, score in task_updated['matches']:
+        print(f"Match: match, Score: {score}")
